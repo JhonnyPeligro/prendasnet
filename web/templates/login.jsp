@@ -21,7 +21,7 @@
         <div class="login-page">
             <div class="form">
               
-              <form method="post" action="../../SourcePackages/mysqlConnection/checkLogin.java" class="login-form">
+              <form method="post" action="LoginServlet" class="login-form">
                 <input type="text" name="dni" placeholder="dni"/>
                 <input type="password" name="pass" placeholder="contraseña"/>
                 <button class="p-button">Ingresar</button>
