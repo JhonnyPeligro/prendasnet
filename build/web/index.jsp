@@ -16,12 +16,14 @@
     </head>
     <body>
         
-        <img class="topLeft logoImg rounded" src="img/logo.png"/>
+        
+        <img class=" logoImg rounded" src="img/triskel.png"/>
 
         <div class="topRight marginTop">
             <a href="templates/login.jsp" class="p-button rounded">Entrar</a>
-            <a href="#" class="p-button rounded">Registrarse</a>
+            <!--<a href="#" class="p-button rounded">Registrarse</a>-->
         </div>
         
+            
     </body>
 </html>

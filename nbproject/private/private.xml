@@ -5,10 +5,11 @@
         <group>
             <file>file:/C:/Users/Caja/Documents/NetBeansProjects/PrendasNet/web/index.jsp</file>
             <file>file:/C:/Users/Caja/Documents/NetBeansProjects/PrendasNet/web/css/indexStyle.css</file>
-            <file>file:/C:/Users/Caja/Documents/NetBeansProjects/PrendasNet/web/templates/home.jsp</file>
             <file>file:/C:/Users/Caja/Documents/NetBeansProjects/PrendasNet/web/templates/login.jsp</file>
-            <file>file:/C:/Users/Caja/Documents/NetBeansProjects/PrendasNet/src/java/mysqlConnection/checkLogin.java</file>
-            <file>file:/C:/Users/Caja/Documents/NetBeansProjects/PrendasNet/src/java/mysqlConnection/dbConnection.java</file>
+            <file>file:/C:/Users/Caja/Documents/NetBeansProjects/PrendasNet/src/java/registerPackage/registerServlet.java</file>
+            <file>file:/C:/Users/Caja/Documents/NetBeansProjects/PrendasNet/src/java/registerPackage/registerDao.java</file>
+            <file>file:/C:/Users/Caja/Documents/NetBeansProjects/PrendasNet/web/templates/register.jsp</file>
+            <file>file:/C:/Users/Caja/Documents/NetBeansProjects/PrendasNet/src/java/loginPackage/UserDao.java</file>
         </group>
     </open-files>
 </project-private>

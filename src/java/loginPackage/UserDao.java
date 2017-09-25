@@ -13,92 +13,25 @@ import java.sql.*;
  * @author Caja
  */
 public class UserDao {
-     static Connection currentCon = null;
-      static ResultSet rs = null;  
-	
-	
-	
-      public static UserBean login(UserBean bean) {
-	
-         //preparing some objects for connection 
-         Statement stmt = null;    
-	
-         String username = bean.getUsername();    
-         String password = bean.getPassword();   
-	    
-         String searchQuery =
-               "select * from users where dni='"
-                        + username
-                        + "' AND password='"
-                        + password
-                        + "'";
-	    
-      // "System.out.println" prints in the console; Normally used to trace the process
-      System.out.println("Your user name is " + username);          
-      System.out.println("Your password is " + password);
-      System.out.println("Query: "+searchQuery);
-	    
-      try 
-      {
-         //connect to DB 
-         currentCon = ConnectionManager.getConnection();
-         stmt=currentCon.createStatement();
-         rs = stmt.executeQuery(searchQuery);	        
-         boolean more = rs.next();
-	       
-         // if user does not exist set the isValid variable to false
-         if (!more) 
-         {
-            System.out.println("Sorry, you are not a registered user! Please sign up first");
-            bean.setValid(false);
-         } 
-	        
-         //if user exists set the isValid variable to true
-         else if (more) 
-         {
-            String firstName = rs.getString("FirstName");
-            String lastName = rs.getString("LastName");
-	     	
-            System.out.println("Welcome " + firstName);
-            bean.setFirstName(firstName);
-            bean.setLastName(lastName);
-            bean.setValid(true);
-         }
-      } 
-
-      catch (Exception ex) 
-      {
-         System.out.println("Log In failed: An Exception has occurred! " + ex);
-      } 
-	    
-    //some exception handling
-    finally 
-    {
-        if (rs != null)	{
-            try {
-               rs.close();
-            } catch (Exception e) {}
-               rs = null;
-            }
-	
-        if (stmt != null) {
-          try {
-            stmt.close();
-          } catch (Exception e) {}
-            stmt = null;
+    
+    public static boolean login(String dni, String pass){
+        boolean status = false;
+        
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/prendas?user=admin&password=admin{1981}");
+            
+            PreparedStatement st = con.prepareStatement("select * from users where dni = ? and password = ?");
+            st.setString(1, dni);
+            st.setString(2, pass);
+            
+            ResultSet rs = st.executeQuery();
+            status = rs.next();
+            
         }
-	
-        if (currentCon != null) {
-          try {
-            currentCon.close();
-           } catch (Exception e) {
-           }
-
-           currentCon = null;
+        catch(Exception e){
+            System.out.println(e);
         }
-      }
-
-     return bean;
-	
-      }
+        return status;
+    }
 }

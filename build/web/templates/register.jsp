@@ -22,9 +22,9 @@
             
             <div class="form">
                 <form class="register-form">
-                    <input type="text" placeholder="dni"/>
-                    <input type="text" placeholder="telefono"/>
-                    <input type="password" placeholder="contraseña"/>
+                    <input type="text" name="dni" placeholder="dni"/>
+                    <input type="text" name="tel" placeholder="telefono"/>
+                    <input type="password" name="pass" placeholder="contraseña"/>
                     <button class="p-button">Registrarse</button>
                     <p class="message">¿Ya estas registrado? <a href="login.jsp">Entrar</a></p>
                 </form>

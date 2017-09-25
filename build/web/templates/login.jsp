@@ -16,12 +16,12 @@
     </head>
     <body>
         
-        <img class="topLeft logoImg rounded" src="../img/logo.png"/>
+        <img class="topLeft logoImg rounded" src="../img/triskelpng"/>
         
         <div class="login-page">
             <div class="form">
               
-              <form method="post" action="LoginServlet" class="login-form">
+              <form method="post" action="/PrendasNet/loginServlet" class="login-form">
                 <input type="text" name="dni" placeholder="dni"/>
                 <input type="password" name="pass" placeholder="contraseña"/>
                 <button class="p-button">Ingresar</button>

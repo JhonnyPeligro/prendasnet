@@ -21,9 +21,9 @@
     <body>
 
         <center>
-           <% UserBean currentUser = (UserBean (session.getAttribute("currentSessionUser"));%>
+           
 			
-           Welcome <%= currentUser.getFirstName() + " " + currentUser.getLastName() %>
+           Welcome user
         </center>
 
     </body>
