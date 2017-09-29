@@ -21,7 +21,7 @@
         <div class="login-page">
             
             <div class="form">
-                <form class="register-form">
+                <form method="post" action="/PrendasNet/registerServlet" class="register-form">
                     <input type="text" name="dni" placeholder="dni"/>
                     <input type="text" name="tel" placeholder="telefono"/>
                     <input type="password" name="pass" placeholder="contraseña"/>

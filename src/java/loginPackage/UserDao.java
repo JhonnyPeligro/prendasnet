@@ -7,6 +7,7 @@ package loginPackage;
 
 
 import java.sql.*;
+import databaseConnectionPackage.connectionProvider;
 
 /**
  *
@@ -18,8 +19,7 @@ public class UserDao {
         boolean status = false;
         
         try{
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/prendas?user=admin&password=admin{1981}");
+            Connection con = connectionProvider.getCon();
             
             PreparedStatement st = con.prepareStatement("select * from users where dni = ? and password = ?");
             st.setString(1, dni);

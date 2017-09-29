@@ -6,24 +6,33 @@
 package registerPackage;
 
 import java.sql.*;
+import databaseConnectionPackage.connectionProvider;
+
+
 /**
  *
  * @author Caja
  */
 public class registerDao {
-    public static void register(String dni, String tel, String pass){
-        try{
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/prendas?user=admin&password=admin{1981}");
-            
-            PreparedStatement st = con.prepareStatement("insert into registeruser(dni, telefono, password) values");
-            st.setString(1, dni);
-            st.setString(2, pass);
-            
-            ResultSet rs = st.executeQuery();
-
-        }
-        catch(Exception e){}
     
+    public static int register(String dni, String tel, String pass){
+        int status = 0;
+        
+        try{
+            Connection con = connectionProvider.getCon();
+            
+            PreparedStatement st = con.prepareStatement("insert into registeruser values(?, ?, ?)");
+            st.setString(1, dni);
+            st.setString(2, tel);
+            st.setString(3, pass);
+            
+            status = st.executeUpdate();
+        }
+        catch(Exception e){
+            System.out.println("ERRORASO");
+        }
+        
+        return status;
     }
+    
 }
