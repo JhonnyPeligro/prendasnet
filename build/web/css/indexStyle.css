@@ -9,7 +9,8 @@ and open the template in the editor.
 */
 
 body{
-    background-color:  #cc3300 !important;
+    background-color: white  
+    /*#cc3300*/ 
 }
 
 .topRight{

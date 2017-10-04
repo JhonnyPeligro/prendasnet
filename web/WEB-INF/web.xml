@@ -5,16 +5,16 @@
         <servlet-class>loginPackage.loginServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>registerServlet</servlet-name>
-        <servlet-class>registerPackage.registerServlet</servlet-class>
+        <servlet-name>signUpServlet</servlet-name>
+        <servlet-class>signUpPackage.signUpServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>loginServlet</servlet-name>
         <url-pattern>/loginServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>registerServlet</servlet-name>
-        <url-pattern>/registerServlet</url-pattern>
+        <servlet-name>signUpServlet</servlet-name>
+        <url-pattern>/signUpServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

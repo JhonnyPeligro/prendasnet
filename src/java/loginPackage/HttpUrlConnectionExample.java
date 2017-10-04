@@ -27,8 +27,8 @@ import org.jsoup.select.Elements;
 
 public class HttpUrlConnectionExample {
 
-  private List<String> cookies;
-  private HttpsURLConnection conn;
+  public List<String> cookies;
+  public HttpsURLConnection conn;
 
   private final String USER_AGENT = "Mozilla/5.0";
 
@@ -44,7 +44,7 @@ public class HttpUrlConnectionExample {
 
 	// 1. Send a "GET" request, so that you can extract the form's data.
 	String page = http.GetPageContent(url);
-	String postParams = http.getFormParams(page, "usert", "pass" );
+	String postParams = http.getFormParams(page, "OPINTA", "Cimera92017" );
 
 	// 2. Construct above post's content and then send a POST request for
 	// authentication
@@ -55,7 +55,7 @@ public class HttpUrlConnectionExample {
 	System.out.println(result);
   }
 
-  private void sendPost(String url, String postParams) throws Exception {
+  public void sendPost(String url, String postParams) throws Exception {
 
 	URL obj = new URL(url);
 	conn = (HttpsURLConnection) obj.openConnection();
@@ -103,7 +103,7 @@ public class HttpUrlConnectionExample {
 
   }
 
-  private String GetPageContent(String url) throws Exception {
+  public String GetPageContent(String url) throws Exception {
 
 	URL obj = new URL(url);
 	conn = (HttpsURLConnection) obj.openConnection();
@@ -175,6 +175,9 @@ public class HttpUrlConnectionExample {
 			result.append("&" + param);
 		}
 	}
+        
+        
+        
 	return result.toString();
   }
 
