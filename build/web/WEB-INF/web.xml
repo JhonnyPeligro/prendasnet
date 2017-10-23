@@ -5,20 +5,23 @@
         <servlet-class>loginPackage.loginServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>signUpServlet</servlet-name>
-        <servlet-class>signUpPackage.signUpServlet</servlet-class>
+        <servlet-name>signUp</servlet-name>
+        <servlet-class>com.cimera.registerController.signUp</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>loginServlet</servlet-name>
         <url-pattern>/loginServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>signUpServlet</servlet-name>
-        <url-pattern>/signUpServlet</url-pattern>
+        <servlet-name>signUp</servlet-name>
+        <url-pattern>/signUp</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
 </web-app>

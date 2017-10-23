@@ -7,7 +7,7 @@ package loginPackage;
 
 
 import java.sql.*;
-import databaseConnectionPackage.connectionProvider;
+import com.cimera.dbConnection.mysqlConnection;
 
 /**
  *
@@ -19,7 +19,7 @@ public class UserDao {
         boolean status = false;
         
         try{
-            Connection con = connectionProvider.getCon();
+            Connection con = mysqlConnection.getCon();
             
             PreparedStatement st = con.prepareStatement("select * from users where dni = ? and password = ?");
             st.setString(1, dni);

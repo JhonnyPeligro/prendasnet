@@ -14,45 +14,25 @@ import javax.servlet.http.HttpServletResponse;
 
 /** * Servlet implementation class LoginServlet */ 
 
-	public class loginServlet extends HttpServlet { 
-		public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, java.io.IOException { 
-			/*try { 
-				UserBean user = new UserBean(); 
-				user.setUserName(request.getParameter("dni")); 
-				user.setPassword(request.getParameter("pass")); 
-				user = UserDao.login(user); 
-
-				if (user.isValid()) { 
-					HttpSession session = request.getSession(true); 
-					
-					response.sendRedirect("templates/userLogged.jsp"); 
-					//logged-in page 
-                                } 
-				else response.sendRedirect("templates/invalidLogin.jsp"); 
-				//error page 
-			} 
-                        catch (Throwable theException) 
-                        { 
-                            System.out.println(theException); 
-			} */
+public class loginServlet extends HttpServlet { 
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, java.io.IOException {                         
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
                         
-                        response.setContentType("text/html");
-                        PrintWriter out = response.getWriter();
+        String dni = request.getParameter("dni");
+        String pass = request.getParameter("pass");
                         
-                        String dni = request.getParameter("dni");
-                        String pass = request.getParameter("pass");
+        if(UserDao.login(dni, pass))
+        {
+            RequestDispatcher rd = request.getRequestDispatcher("templates/userLogged.jsp");
+            rd.include(request, response);
+        }
+        else{
+            out.println("¡Usuario o contraseña incorrectos!");
+            RequestDispatcher rd = request.getRequestDispatcher("templates/login.jsp");
+            rd.forward(request, response);
+        }
                         
-                        if(UserDao.login(dni, pass))
-                        {
-                            RequestDispatcher rd = request.getRequestDispatcher("templates/userLogged.jsp");
-                            rd.include(request, response);
-                        }
-                        else{
-                            out.println("¡Usuario o contraseña incorrectos!");
-                            RequestDispatcher rd = request.getRequestDispatcher("templates/login.jsp");
-                            rd.forward(request, response);
-                        }
-                        
-                        out.close();
-		} 
-	}
+        out.close();
+    } 
+}

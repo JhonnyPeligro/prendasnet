@@ -9,9 +9,22 @@ and open the template in the editor.
 */
 
 body{
-    background-color: white  
-    /*#cc3300*/ 
+    background-color: white;  
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
 }
+p, h1, form, button{border: 0; margin:0;padding: 0;}
+
+#login-box{
+    width:333px;
+    height: 352px;
+    padding: 58px 76px 0 76px;
+    color: #ebebeb;
+    font: 12px Arial, Helvetica, sans-serif;
+    margin-top: -70px;
+    /*background: url(../images/login-box-backg.png) no-repeat left top;*/
+}
+
 
 .topRight{
     float: right;
