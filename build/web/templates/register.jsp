@@ -16,12 +16,12 @@
     </head>
     <body>
         
-        <img class="topLeft logoImg rounded" src="../img/logo.png"/>
+        <img class="topLeft logoImg rounded" src="../img/triskel.png"/>
         
         <div class="login-page">
             
             <div class="form">
-                <form method="post" action="<%=request.getContextPath()%>/signUp" class="register-form">
+                <form method="POST" action="<%=request.getContextPath()%>/SignUp" class="register-form">
                     <input type="text" name="dni" placeholder="dni"/>
                     <input type="text" name="tel" placeholder="telefono"/>
                     <input type="password" name="pass" placeholder="contraseña"/>

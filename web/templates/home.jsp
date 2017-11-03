@@ -16,11 +16,7 @@
     </head>
     <body>
         <h1>Response</h1>
-        <br/><%= new Date()%><br/>
-        <% 
-            User user = (User) session.getAttribute("user");
-        %>
-        <b><%= user.getFirstName() + " " + user.getLastName() %></b>
+
         <br/>
         
         <table>
@@ -32,17 +28,8 @@
                 </tr>
             </thead>
             <tbody>
-                <%
-                    LoginService loginService = new loginService();
-                    List<User> list = loginService.getListUser();
-                    for(User u : list){
-                %>
-                <tr>
-                    <td><%=u.getUserId()%></td>
-                    <td><%=u.getFirstName()%></td>
-                    <td><%=u.getLastName()%></td>
-                </tr>
-                <%}%>
+
+
             </tbody>
         </table>
         <br/>

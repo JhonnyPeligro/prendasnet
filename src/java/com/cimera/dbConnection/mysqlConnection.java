@@ -12,20 +12,20 @@ import java.sql.*;
  * @author Caja
  */
 public class mysqlConnection {
-    private static Connection con = null;
+
     
-    static{
+    public static Connection getCon(){
+        Connection con = null;
         try{
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/prendasnet?user=admin&password=admin{1981}");
         }
         catch(Exception e){
-           e.printStackTrace();
+           System.out.println("No se pudo conectar con la base de datos mysql");
         }
-    }
-    
-    public static Connection getCon(){
         return con;
     }
+    
+ 
 }
 

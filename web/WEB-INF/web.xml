@@ -2,25 +2,30 @@
 <web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
     <servlet>
         <servlet-name>loginServlet</servlet-name>
-        <servlet-class>loginPackage.loginServlet</servlet-class>
+        <servlet-class>com.cimera.userLogin.loginServlet</servlet-class>
     </servlet>
+    
     <servlet>
-        <servlet-name>signUp</servlet-name>
-        <servlet-class>com.cimera.registerController.signUp</servlet-class>
+        <servlet-name>SignUp</servlet-name>
+        <servlet-class>com.cimera.userSignUp.SignUp</servlet-class>
     </servlet>
+    
     <servlet-mapping>
         <servlet-name>loginServlet</servlet-name>
         <url-pattern>/loginServlet</url-pattern>
     </servlet-mapping>
+    
     <servlet-mapping>
-        <servlet-name>signUp</servlet-name>
-        <url-pattern>/signUp</url-pattern>
+        <servlet-name>SignUp</servlet-name>
+        <url-pattern>/SignUp</url-pattern>
     </servlet-mapping>
+    
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
+    
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
