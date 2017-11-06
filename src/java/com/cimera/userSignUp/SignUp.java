@@ -80,10 +80,13 @@ public class SignUp extends HttpServlet {
             //string sql;
             //sql = "INSERT INTO users (dni, tel, pass) VALUES ('"+dni+"', '"+tel+"', '"+pass+"')";
             
-            PreparedStatement stmt = con.prepareStatement("INSERT INTO users (dni, tel, pass) VALUES (?, ?, ?)");
+            /*PreparedStatement stmt = con.prepareStatement("INSERT INTO users (dni, tel, pass) VALUES (?, ?, ?)");
             stmt.setString(1, dni);
             stmt.setString(2, tel);
-            stmt.setString(3, pass);
+            stmt.setString(3, pass);*/
+            
+            PreparedStatement stmt = con.prepareStatement("INSERT INTO users (dni, tel, pass) SELECT * FROM (SELECT '"+dni+"', '"+tel+"', '"+pass+"') AS tmp WHERE NOT EXISTS (SELECT dni FROM users WHERE dni='"+dni+"')");
+            
             
             int row = stmt.executeUpdate();
             stmt.close();
@@ -93,7 +96,7 @@ public class SignUp extends HttpServlet {
                 dispatcher = request.getRequestDispatcher("templates/home.jsp");
             }else{
                 session.setAttribute("ERROR", "ERROR! SQL ERROR");
-                dispatcher = request.getRequestDispatcher("register.jsp");
+                dispatcher = request.getRequestDispatcher("templates/register.jsp");
             }
             
         }
