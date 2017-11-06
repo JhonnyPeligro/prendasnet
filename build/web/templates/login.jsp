@@ -21,11 +21,11 @@
         <div class="login-page">
             <div class="form">
               
-              <form method="post" action="<%=request.getContextPath()%>/loginServlet" class="login-form">
+              <form method="post" action="<%=request.getContextPath()%>/Login" class="login-form">
                     <input type="text" name="dni" placeholder="dni"/>
                     <input type="password" name="pass" placeholder="contraseña"/>
                     <button class="p-button">Ingresar</button>
-                    <p class="message">¿Ya estas registrado? <a href="register.jsp">Registrate</a></p>
+                    <p class="message">¿No estas registrado? <a href="register.jsp">Registrate</a></p>
               </form>
                   
             </div>

@@ -80,7 +80,7 @@ public class SignUp extends HttpServlet {
             //string sql;
             //sql = "INSERT INTO users (dni, tel, pass) VALUES ('"+dni+"', '"+tel+"', '"+pass+"')";
             
-            PreparedStatement stmt = con.prepareStatement("INSERT INTO USERS (dni, tel, pass) VALUES (?, ?, ?)");
+            PreparedStatement stmt = con.prepareStatement("INSERT INTO users (dni, tel, pass) VALUES (?, ?, ?)");
             stmt.setString(1, dni);
             stmt.setString(2, tel);
             stmt.setString(3, pass);

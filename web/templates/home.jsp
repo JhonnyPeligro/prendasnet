@@ -28,7 +28,10 @@
                 </tr>
             </thead>
             <tbody>
-
+                <tr>
+                    <td>${user.dni}</td>
+                    <td>${user.tel}</td>
+                </tr>
 
             </tbody>
         </table>
