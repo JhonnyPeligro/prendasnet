@@ -22,9 +22,9 @@
             
             <div class="form">
                 <form method="POST" action="<%=request.getContextPath()%>/SignUp" class="register-form">
-                    <input type="text" name="dni" placeholder="dni"/>
-                    <input type="text" name="tel" placeholder="telefono"/>
-                    <input type="password" name="pass" placeholder="contraseña"/>
+                    <input type="text" name="dni" placeholder="dni" required/>
+                    <input type="text" name="tel" placeholder="telefono" required/>
+                    <input type="password" name="pass" placeholder="contraseña" required/>
                     <button class="p-button">Registrarse</button>
                     <p class="message">¿Ya estas registrado? <a href="login.jsp">Entrar</a></p>
                 </form>

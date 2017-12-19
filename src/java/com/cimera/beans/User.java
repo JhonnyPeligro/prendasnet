@@ -7,6 +7,7 @@ package com.cimera.beans;
 
 
 import java.io.Serializable;
+
 /**
  *
  * @author Caja

@@ -93,7 +93,7 @@ public class SignUp extends HttpServlet {
             if(row > 0){
                 System.out.println("Se ha registrado exitosamente");
                 //response.sendRedirect("profile");
-                dispatcher = request.getRequestDispatcher("templates/home.jsp");
+                dispatcher = request.getRequestDispatcher("index.jsp");
             }else{
                 session.setAttribute("ERROR", "ERROR! SQL ERROR");
                 dispatcher = request.getRequestDispatcher("templates/register.jsp");
