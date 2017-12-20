@@ -1,186 +1,124 @@
-<%-- 
-    Document   : index
-    Created on : 30-ago-2017, 20:35:05
-    Author     : matias cazas
---%>
+<!DOCTYPE html>
+<html>
+    <title>Bienvenido a PrendasNET</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/w3-css.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+    body, html {
+        height: 100%;
+        line-height: 1.8;
+    }
+    /* Full height image header */
+    .bgimg-1 {
+        background-position: center;
+        background-size: cover;
+        background-color: #673ab7;
+        min-height: 100%;
+    }
+    .w3-bar .w3-button {
+        padding: 16px;
+    }
+    </style>
+    <body>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!doctype html>
-<html class="no-js" lang="">
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+            <div class="w3-bar w3-black w3-card" id="myNavbar" style="opacity: 0.2;">
+            <a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a>
+            <!-- Right-sided navbar links -->
+            <div class="w3-right w3-hide-small">
+              <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+              <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+              <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+              <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
+              <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+            </div>
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+        </div>
 
-<head>
-<meta charset="utf-8">
-<meta name="description" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Inicio</title>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/jquery.fancybox.css">
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/animate.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-</head>
-
-<body>
-<!-- header section -->
-<section class="banner" role="banner">
-  <header id="header"> 
-    <!-- navigation section  -->
-    <div class="header-content clearfix"> <a class="logo" href="#"><img src="images/logo.png" alt="PrendasNET"></a>
-        <nav class="navigation" role="navigation">
-            <ul class="primary-nav">
-              <li><a href="about.html">Link</a></li>
-              <li><a href="contact.html">Link 2</a></li>
-              <li><a href="#">Link 3</a></li>
-            </ul>
+        <!-- Sidebar on small screens when clicking the menu icon -->
+        <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+          <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+          <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+          <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+          <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+          <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+          <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
         </nav>
-      <a href="#" class="nav-toggle">Menu<span></span></a> 
-    </div>
-    <!-- navigation section  --> 
-  </header>
-  
-  <!-- banner text -->
-  <div class="container">
-    <div class="col-md-10 col-md-offset-1">
-      <div class="banner-text text-center">
-        <h1>Bienenido a prendasnet</h1>
-        <p>Ingresar un texto.</p>
-        <!-- banner text --> 
-      </div>
-    </div>
-  </div>
-</section>
-<!-- header section --> 
-<!-- description text section -->
-<section id="descripton" class="section descripton">
-  <div class="container">
-    <div class="col-md-10 col-md-offset-1 text-center">
-      <p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet avida at eget metus.</p>
-    </div>
-  </div>
-</section>
-<!-- description text section --> 
-<!-- portfolio section -->
-<section id="works" class="works section no-padding">
-  <div class="container-fluid">
-    <div class="row no-gutter">
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/work-1.jpg" class="work-box"> <img src="images/work-1.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>Project Name</h5>
-            <p>Logo Design</p>
-          </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/work-2.jpg" class="work-box"> <img src="images/work-2.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>Project Name</h5>
-            <p>Website Design</p>
-          </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/work-3.jpg" class="work-box"> <img src="images/work-3.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>Project Name</h5>
-            <p>Branding</p>
-          </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/work-4.jpg" class="work-box"> <img src="images/work-4.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>Project Name</h5>
-            <p>Graphic Design</p>
-          </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/work-5.jpg" class="work-box"> <img src="images/work-5.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>Project Name</h5>
-            <p>Website Design</p>
-          </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/work-6.jpg" class="work-box"> <img src="images/work-6.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>Project Name</h5>
-            <p>Logo Design</p>
-          </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/work-7.jpg" class="work-box"> <img src="images/work-7.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>Project Name</h5>
-            <p>Branding</p>
-          </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/work-8.jpg" class="work-box"> <img src="images/work-8.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>Project Name</h5>
-            <p>Website Design</p>
-          </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-    </div>
-  </div>
-</section>
-<!-- portfolio section --> 
-<!-- hire me section -->
-<section id="hireme" class="section hireme">
-  <div class="container">
-    <div class="col-md-8 col-md-offset-2 text-center">
-      <h3>Algo</h3>
-      <p>ALGO PERO ALGO MAS</p>
-      <a href="contact.html" class="btn btn-large">asdasgae</a> </div>
-  </div>
-</section>
-<!-- hire me section --> 
-<!-- footer -->
-<footer class="section footer">
-  <div class="footer-bottom">
-    <div class="container">
-      <div class="col-md-12">
-        <p>
-        <ul class="footer-share">
-          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-          <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-          <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
-        </ul>
-        </p>
-        <p>Â© 2015 All rights reserved. All Rights Reserved<br>
-          Made with <i class="fa fa-heart pulse"></i> by <a href="http://www.designstub.com/">Designstub</a></p>
-      </div>
-    </div>
-  </div>
-</footer>
-<!-- footer --> 
 
-<!-- JS FILES --> 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
-<script src="js/bootstrap.min.js"></script> 
-<script src="js/jquery.fancybox.pack.js"></script> 
-<script src="js/jquery.waypoints.min.js"></script> 
-<script src="js/retina.min.js"></script> 
-<script src="js/modernizr.js"></script> 
-<script src="js/main.js"></script>
-</body>
+        <!-- Header with full-height image -->
+        <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+          <div class="w3-display-left w3-text-white" style="padding:48px">
+            <span class="w3-jumbo w3-hide-small">Start something that matters</span><br>
+            <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
+            <span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span>
+            <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
+          </div> 
+          <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+          </div>
+        </header> 
+
+        <!-- Footer -->
+        <footer class="section footer">
+          <div class="footer-bottom">
+            <div class="container">
+              <div class="col-md-12">
+                <p>
+                <ul class="footer-share">
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                  <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                  <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                </ul>
+                </p>
+                <p>© 2017 All rights reserved. All Rights Reserved<br>
+                  Made with <i class="fa fa-heart pulse"></i> by <a href="http://www.designstub.com/">Designstub</a></p>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!--footer-->
+
+        <!-- Add Google Maps -->
+        <script>
+        // Toggle between showing and hiding the sidebar when clicking the menu icon
+        var mySidebar = document.getElementById("mySidebar");
+
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+            } else {
+                mySidebar.style.display = 'block';
+            }
+        }
+
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+        }
+        </script>
+
+    </body>
 </html>
