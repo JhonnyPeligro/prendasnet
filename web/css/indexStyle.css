@@ -8,12 +8,8 @@ and open the template in the editor.
     Author     : matias cazas
 */
 
-body{
-    background-color: white;  
-    font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
-    font-size: 12px;
-}
 p, h1, form, button{border: 0; margin:0;padding: 0;}
+
 
 #login-box{
     width:333px;
