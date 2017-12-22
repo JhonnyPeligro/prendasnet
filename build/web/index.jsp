@@ -55,7 +55,7 @@
         <div class="w3-top">
             <div class="w3-right w3-hide-small w3-margin">
                 <a href="templates/login.jsp" class="w3-button w3-border w3-round w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off">Ingresar</a>
-                <a href="#" class="w3-button w3-border w3-round w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off">Registrate</a>
+                <a href="templates/login.jsp" class="w3-button w3-border w3-round w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off">Registrate</a>
             </div>
             <div>
                 <a href="#"><img class="resize w3-margin" src="img/prendaspnet.png" alt="PrendasNET"></a>
@@ -64,7 +64,7 @@
               <i class="fa fa-bars"></i>
             </a>
         </div>
-        <!--buttons-->
+        <!--top of the page-->
 
         <!-- Sidebar on small screens when clicking the menu icon -->
         <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
@@ -109,7 +109,8 @@
           </div>
         </footer>
         <!--footer-->
-
+        
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
         <script>
         // Toggle between showing and hiding the sidebar when clicking the menu icon
         var mySidebar = document.getElementById("mySidebar");
