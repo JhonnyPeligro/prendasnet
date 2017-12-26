@@ -46,8 +46,8 @@
         </div>
         <!--top of the page-->
         
-        <!-- Header with full-height image -->
-        <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+        <!-- content -->
+        <header class="bgimg-1 w3-display-container w3-grayscale-min">
           <div class="w3-display-left w3-text-white" style="padding:48px">
             <span class="w3-jumbo w3-hide-small">Bienvenido a PrendasNET</span><br>
             <!--small devices-->
